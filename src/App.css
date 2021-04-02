@@ -1,11 +1,11 @@
 .App {
-  background-color: #FFFAEB;
+  background-color: #FFFFFF;
   height:100vh;
   width:100vw;
 }
 
 .App-header {
-  font-size: calc(10px + 2vmin);
+  font-size: calc(14px + 2vmin);
   color: black;
   font-weight: bold;
 }
