@@ -5,13 +5,17 @@
   "homepage": "http://www.briantao.com",
   "dependencies": {
     "@material-ui/core": "^4.11.3",
+    "@material-ui/icons": "^4.11.2",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "final-form": "^4.20.2",
     "gh-pages": "^3.1.0",
+    "markdown-to-jsx": "^7.1.2",
     "prettier": "^2.0.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-final-form": "^6.5.3",
     "react-scripts": "^4.0.3"
   },
   "scripts": {
