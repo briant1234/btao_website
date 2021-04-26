@@ -1,14 +1,12 @@
 import React from "react";
 import "./App.css";
 import { ThemeProvider } from "@material-ui/core/styles"
-import { default as OnePirate } from "./onepirate/Home"
-
-import { Icon } from "@material-ui/core"
+import { default as OnePirate } from "./pages/Home"
 
 
 function App() {
   return (
-      <ThemeProvider>
+      <ThemeProvider >
           <div className="App">
               <OnePirate/>
           </div>

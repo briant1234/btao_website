@@ -4,8 +4,11 @@ import clsx from 'clsx';
 
 import { withStyles } from '@material-ui/core/styles';
 import Link from '@material-ui/core/Link';
-import AppBar from '../components/AppBar';
-import Toolbar, { styles as toolbarStyles } from '../components/Toolbar';
+import AppBar from '../../components/AppBar';
+import Toolbar, { styles as toolbarStyles } from '../../components/Toolbar';
+
+// Import constants
+import {SiteTitle} from '../../constants/Strings'
 
 const styles = (theme) => ({
   title: {
@@ -51,7 +54,7 @@ function AppAppBar(props) {
             className={classes.title}
             href="/premium-themes/onepirate/"
           >
-            {'onepirate'}
+            {SiteTitle}
           </Link>
           <div className={classes.right}>
             <Link
