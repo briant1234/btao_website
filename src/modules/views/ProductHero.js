@@ -2,15 +2,17 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Button from '../../components/Button';
-import Typography from '../../components/Typography';
+// import Typography from '../../components/Typography';
+import { Typography } from '@material-ui/core'
 import ProductHeroLayout from './ProductHeroLayout';
 
 const backgroundImage =
   'https://images.unsplash.com/photo-1534854638093-bada1813ca19?auto=format&fit=crop&w=1400&q=80';
 
+const gradBackgroundImage = 'https://lh3.googleusercontent.com/pw/ACtC-3fWamx5qRl677LD2-a-CEMyodKp35ymfQttvc2Lin7INkfJUUjxm-Y35a2hWp_3Qb-O5H6tyEiOgaefd2Img9QvVTumcOG2JFCalnwKORcPZ06JQ2V1TuTvK2gIg7Bk_5ElW9VTXigMFS9VRVUQfEoyNw=w1078-h719-no?authuser=0'
 const styles = (theme) => ({
   background: {
-    backgroundImage: `url(${backgroundImage})`,
+    backgroundImage: `url(${gradBackgroundImage})`,
     backgroundColor: '#7fc7d9', // Average color of the background image.
     backgroundPosition: 'center',
   },
@@ -41,10 +43,10 @@ function ProductHero(props) {
         alt="increase priority"
       /> */}
       <Typography color="inherit" align="center" variant="h2" marked="center">
-        HIRE ME FOR UR WEDDING PICS
+        {'Portraits & Weddings'}
       </Typography>
       <Typography color="inherit" align="center" variant="h5" className={classes.h5}>
-        Enjoy secret offers up to -70% off the best luxury hotels every Sunday.
+        I take the best pics of u
       </Typography>
       <Button
         color="secondary"
@@ -54,7 +56,7 @@ function ProductHero(props) {
         component="a"
         href="/premium-themes/onepirate/sign-up/"
       >
-        Register
+        Book Now
       </Button>
       <Typography variant="body2" color="inherit" className={classes.more}>
         Discover the experience

@@ -2,7 +2,7 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { withStyles } from '@material-ui/core/styles';
-import Container from '@material-ui/core/Container';
+import { Container } from '@material-ui/core';
 
 const styles = (theme) => ({
   root: {
@@ -21,7 +21,7 @@ const styles = (theme) => ({
     marginBottom: theme.spacing(14),
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'center',
+    alignItems: 'center'
   },
   backdrop: {
     position: 'absolute',
