@@ -1,21 +1,21 @@
-import { createMuiTheme } from '@material-ui/core/styles';
-import { green, grey, red } from '@material-ui/core/colors';
+import { createMuiTheme } from "@material-ui/core/styles";
+import { green, grey, red } from "@material-ui/core/colors";
 
 const rawTheme = createMuiTheme({
   palette: {
     primary: {
-      light: '#69696a',
-      main: '#28282a',
-      dark: '#1e1e1f',
+      light: "#69696a",
+      main: "#28282a",
+      dark: "#1e1e1f",
     },
     secondary: {
-      light: '#fff5f8',
-      main: '#ff3366',
-      dark: '#e62958',
+      light: "#fff5f8",
+      main: "#ff3366",
+      dark: "#e62958",
     },
     warning: {
-      main: '#ffc071',
-      dark: '#ffb25e',
+      main: "#ffc071",
+      dark: "#ffb25e",
     },
     error: {
       light: red[50],
@@ -40,8 +40,8 @@ const rawTheme = createMuiTheme({
 const fontHeader = {
   color: rawTheme.palette.text.primary,
   fontWeight: rawTheme.typography.fontWeightMedium,
-  fontFamily: "'Roboto Condensed', sans-serif",
-  textTransform: 'uppercase',
+  fontFamily: "'Noto Sans', 'Roboto Condensed', sans-serif",
+  textTransform: "uppercase",
 };
 
 const theme = {

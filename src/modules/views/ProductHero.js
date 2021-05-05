@@ -1,20 +1,19 @@
-import * as React from 'react';
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import Button from '../../components/Button';
-// import Typography from '../../components/Typography';
-import { Typography } from '@material-ui/core'
-import ProductHeroLayout from './ProductHeroLayout';
+import React from "react";
+import PropTypes from "prop-types";
+import { withStyles } from "@material-ui/core/styles";
+import { Button, Typography } from "@material-ui/core";
+import ProductHeroLayout from "./ProductHeroLayout";
 
 const backgroundImage =
-  'https://images.unsplash.com/photo-1534854638093-bada1813ca19?auto=format&fit=crop&w=1400&q=80';
+  "https://images.unsplash.com/photo-1534854638093-bada1813ca19?auto=format&fit=crop&w=1400&q=80";
 
-const gradBackgroundImage = 'https://lh3.googleusercontent.com/pw/ACtC-3fWamx5qRl677LD2-a-CEMyodKp35ymfQttvc2Lin7INkfJUUjxm-Y35a2hWp_3Qb-O5H6tyEiOgaefd2Img9QvVTumcOG2JFCalnwKORcPZ06JQ2V1TuTvK2gIg7Bk_5ElW9VTXigMFS9VRVUQfEoyNw=w1078-h719-no?authuser=0'
+const gradBackgroundImage =
+  "https://lh3.googleusercontent.com/pw/ACtC-3fWamx5qRl677LD2-a-CEMyodKp35ymfQttvc2Lin7INkfJUUjxm-Y35a2hWp_3Qb-O5H6tyEiOgaefd2Img9QvVTumcOG2JFCalnwKORcPZ06JQ2V1TuTvK2gIg7Bk_5ElW9VTXigMFS9VRVUQfEoyNw=w1078-h719-no?authuser=0";
 const styles = (theme) => ({
   background: {
     backgroundImage: `url(${gradBackgroundImage})`,
-    backgroundColor: '#7fc7d9', // Average color of the background image.
-    backgroundPosition: 'center',
+    backgroundColor: "#7fc7d9", // Average color of the background image.
+    backgroundPosition: "center",
   },
   button: {
     minWidth: 200,
@@ -22,7 +21,7 @@ const styles = (theme) => ({
   h5: {
     marginBottom: theme.spacing(4),
     marginTop: theme.spacing(4),
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.up("sm")]: {
       marginTop: theme.spacing(10),
     },
   },
@@ -43,9 +42,14 @@ function ProductHero(props) {
         alt="increase priority"
       /> */}
       <Typography color="inherit" align="center" variant="h2" marked="center">
-        {'Portraits & Weddings'}
+        {"Portraits & Weddings"}
       </Typography>
-      <Typography color="inherit" align="center" variant="h5" className={classes.h5}>
+      <Typography
+        color="inherit"
+        align="center"
+        variant="h5"
+        className={classes.h5}
+      >
         I take the best pics of u
       </Typography>
       <Button

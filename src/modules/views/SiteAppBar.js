@@ -1,14 +1,12 @@
-import * as React from 'react';
-import PropTypes from 'prop-types';
-import clsx from 'clsx';
+import React from "react";
+import clsx from "clsx";
 
-import { withStyles } from '@material-ui/core/styles';
-import Link from '@material-ui/core/Link';
-import AppBar from '../../components/AppBar';
-import Toolbar, { styles as toolbarStyles } from '../../components/Toolbar';
+import { withStyles } from "@material-ui/core/styles";
+import { AppBar, Link, Toolbar } from "@material-ui/core";
+import { styles as toolbarStyles } from "../../components/Toolbar";
 
 // Import constants
-import {SiteTitle} from '../../constants/Strings'
+import { SiteTitle } from "../../constants/Strings";
 
 const styles = (theme) => ({
   title: {
@@ -16,7 +14,7 @@ const styles = (theme) => ({
   },
   placeholder: toolbarStyles(theme).root,
   toolbar: {
-    justifyContent: 'space-between',
+    justifyContent: "space-between",
   },
   left: {
     flex: 1,
@@ -26,8 +24,8 @@ const styles = (theme) => ({
   },
   right: {
     flex: 1,
-    display: 'flex',
-    justifyContent: 'flex-end',
+    display: "flex",
+    justifyContent: "flex-end",
   },
   rightLink: {
     fontSize: 16,
@@ -37,22 +35,48 @@ const styles = (theme) => ({
   linkSecondary: {
     color: theme.palette.secondary.main,
   },
+  toolbarRoot: {
+    height: 64,
+    [theme.breakpoints.up("sm")]: {
+      height: 70,
+    },
+  },
 });
 
-function AppAppBar(props) {
+const siteLinks = {
+  SiteTitle: "/",
+  Weddings: "/",
+  Portraits: "/",
+  About: "/",
+  Pricing: "/",
+};
+
+/** renderSiteLinks: Iterate through siteLinks object and generates a Link Component
+ *  @param links: {object}
+ */
+const renderSiteLinks = (links) => {
+  return Object.entries(links).forEach(([title, path]) => {
+    <Link varient="h6" underline="none" color="inherit" href={path}>
+      {title}
+    </Link>;
+  });
+};
+
+function SiteAppBar(props) {
   const { classes } = props;
 
   return (
     <div>
       <AppBar position="fixed">
-        <Toolbar className={classes.toolbar}>
+        <Toolbar style={{ height: 70 }} className={classes.toolbar}>
+          {/* {renderSiteLinks(siteLinks)} */}
           <div className={classes.left} />
           <Link
             variant="h6"
             underline="none"
             color="inherit"
             className={classes.title}
-            href="/premium-themes/onepirate/"
+            href="/"
           >
             {SiteTitle}
           </Link>
@@ -64,7 +88,7 @@ function AppAppBar(props) {
               className={classes.rightLink}
               href="/premium-themes/onepirate/sign-in/"
             >
-              {'Weddings'}
+              {"Weddings"}
             </Link>
             <Link
               variant="h6"
@@ -72,7 +96,7 @@ function AppAppBar(props) {
               className={clsx(classes.rightLink, classes.linkSecondary)}
               href="/premium-themes/onepirate/sign-up/"
             >
-              {'Portraits'}
+              {"Portraits"}
             </Link>
             <Link
               variant="h6"
@@ -80,7 +104,7 @@ function AppAppBar(props) {
               className={clsx(classes.rightLink, classes.linkSecondary)}
               href="/premium-themes/onepirate/sign-up/"
             >
-              {'About'}
+              {"About"}
             </Link>
             <Link
               variant="h6"
@@ -88,7 +112,7 @@ function AppAppBar(props) {
               className={clsx(classes.rightLink, classes.linkSecondary)}
               href="/premium-themes/onepirate/sign-up/"
             >
-              {'Pricing'}
+              {"Pricing"}
             </Link>
           </div>
         </Toolbar>
@@ -98,11 +122,4 @@ function AppAppBar(props) {
   );
 }
 
-AppAppBar.propTypes = {
-  /**
-   * Override or extend the styles applied to the component.
-   */
-  classes: PropTypes.object.isRequired,
-};
-
-export default withStyles(styles)(AppAppBar);
+export default withStyles(styles)(SiteAppBar);
