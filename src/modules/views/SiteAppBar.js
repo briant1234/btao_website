@@ -67,7 +67,7 @@ function SiteAppBar(props) {
 
   return (
     <div>
-      <AppBar position="fixed">
+      <AppBar style={{ color: "main" }} position="fixed">
         <Toolbar style={{ height: 70 }} className={classes.toolbar}>
           {/* {renderSiteLinks(siteLinks)} */}
           <div className={classes.left} />
@@ -75,7 +75,7 @@ function SiteAppBar(props) {
             variant="h6"
             underline="none"
             color="inherit"
-            className={classes.title}
+            // className={classes.title}
             href="/"
           >
             {SiteTitle}
@@ -86,7 +86,7 @@ function SiteAppBar(props) {
               variant="h6"
               underline="none"
               className={classes.rightLink}
-              href="/premium-themes/onepirate/sign-in/"
+              href="/weddings"
             >
               {"Weddings"}
             </Link>
@@ -94,7 +94,7 @@ function SiteAppBar(props) {
               variant="h6"
               underline="none"
               className={clsx(classes.rightLink, classes.linkSecondary)}
-              href="/premium-themes/onepirate/sign-up/"
+              href="/portraits"
             >
               {"Portraits"}
             </Link>
@@ -102,7 +102,7 @@ function SiteAppBar(props) {
               variant="h6"
               underline="none"
               className={clsx(classes.rightLink, classes.linkSecondary)}
-              href="/premium-themes/onepirate/sign-up/"
+              href="/about"
             >
               {"About"}
             </Link>
@@ -110,7 +110,7 @@ function SiteAppBar(props) {
               variant="h6"
               underline="none"
               className={clsx(classes.rightLink, classes.linkSecondary)}
-              href="/premium-themes/onepirate/sign-up/"
+              href="/pricing"
             >
               {"Pricing"}
             </Link>

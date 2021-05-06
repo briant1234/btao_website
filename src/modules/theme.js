@@ -29,7 +29,7 @@ const rawTheme = createMuiTheme({
     },
   },
   typography: {
-    fontFamily: "'Work Sans', sans-serif",
+    fontFamily: "'Source Sans Pro', 'Work Sans', sans-serif",
     fontSize: 14,
     fontWeightLight: 300, // Work Sans
     fontWeightRegular: 400, // Work Sans
@@ -40,7 +40,7 @@ const rawTheme = createMuiTheme({
 const fontHeader = {
   color: rawTheme.palette.text.primary,
   fontWeight: rawTheme.typography.fontWeightMedium,
-  fontFamily: "'Noto Sans', 'Roboto Condensed', sans-serif",
+  fontFamily: "'Source Sans Pro', 'Roboto Condensed', sans-serif",
   textTransform: "uppercase",
 };
 
@@ -60,7 +60,6 @@ const theme = {
     h1: {
       ...rawTheme.typography.h1,
       ...fontHeader,
-      letterSpacing: 0,
       fontSize: 60,
     },
     h2: {
@@ -86,7 +85,10 @@ const theme = {
     h6: {
       ...rawTheme.typography.h6,
       ...fontHeader,
-      fontSize: 18,
+      fontSize: 14,
+      [rawTheme.breakpoints.up("md")]: {
+        fontSize: 24,
+      },
     },
     subtitle1: {
       ...rawTheme.typography.subtitle1,
