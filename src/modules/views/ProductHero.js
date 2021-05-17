@@ -58,12 +58,13 @@ function ProductHero(props) {
         size="large"
         className={classes.button}
         component="a"
-        href="/premium-themes/onepirate/sign-up/"
+        href="mailto:btaophotography@gmail.com?subject=Booking a photoshoot&body=Let me know what sort of photos you're looking for, how many people you're taking photos with, and what you find important in photographs!"
       >
         Book Now
       </Button>
       <Typography variant="body2" color="inherit" className={classes.more}>
-        Discover the experience
+        (Site is under construction, but press the button above to send me a
+        message!, or reach me at 732-788-5560)
       </Typography>
     </ProductHeroLayout>
   );
