@@ -50,7 +50,7 @@ function ProductHero(props) {
         variant="h5"
         className={classes.h5}
       >
-        I take the best pics of u
+        Pittsburgh & North-East based Photographer
       </Typography>
       <Button
         color="secondary"
