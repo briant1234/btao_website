@@ -8,12 +8,17 @@ import {
   TextField,
 } from "@material-ui/core";
 
+// Import constants
+import { SiteTitle } from "../../constants/Strings";
+
+import { Facebook, Instagram } from "@material-ui/icons";
+
 function Copyright() {
   return (
     <React.Fragment>
       {"© "}
-      <Link color="inherit" href="https://material-ui.com/">
-        Your Website
+      <Link color="inherit" href="https://briantaophotography.com">
+        {SiteTitle}
       </Link>{" "}
       {new Date().getFullYear()}
     </React.Fragment>
@@ -42,7 +47,6 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: theme.palette.warning.main,
     marginRight: theme.spacing(1),
     "&:hover": {
       backgroundColor: theme.palette.warning.dark,
@@ -90,20 +94,17 @@ export default function AppFooter() {
               spacing={2}
             >
               <Grid item className={classes.icons}>
-                <a href="https://material-ui.com/" className={classes.icon}>
-                  <img
-                    src="/static/themes/onepirate/appFooterFacebook.png"
-                    alt="Facebook"
-                  />
-                </a>
                 <a
-                  href="https://twitter.com/MaterialUI"
+                  href="https://www.facebook.com/btaophotography/"
                   className={classes.icon}
                 >
-                  <img
-                    src="/static/themes/onepirate/appFooterTwitter.png"
-                    alt="Twitter"
-                  />
+                  <Facebook />
+                </a>
+                <a
+                  href="https://www.instagram.com/btao1234/"
+                  className={classes.icon}
+                >
+                  <Instagram />
                 </a>
               </Grid>
               <Grid item>
@@ -111,7 +112,7 @@ export default function AppFooter() {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item xs={6} sm={4} md={2}>
+          {/* <Grid item xs={6} sm={4} md={2}>
             <Typography variant="h6" marked="left" gutterBottom>
               Legal
             </Typography>
@@ -123,8 +124,8 @@ export default function AppFooter() {
                 <Link href="/premium-themes/onepirate/privacy/">Privacy</Link>
               </li>
             </ul>
-          </Grid>
-          <Grid item xs={6} sm={8} md={4}>
+          </Grid> */}
+          {/* <Grid item xs={6} sm={8} md={4}>
             <Typography variant="h6" marked="left" gutterBottom>
               Language
             </Typography>
@@ -143,36 +144,7 @@ export default function AppFooter() {
                 </option>
               ))}
             </TextField>
-          </Grid>
-          <Grid item>
-            <Typography variant="caption">
-              {"Icons made by "}
-              <Link
-                href="https://www.freepik.com"
-                rel="sponsored"
-                title="Freepik"
-              >
-                Freepik
-              </Link>
-              {" from "}
-              <Link
-                href="https://www.flaticon.com"
-                rel="sponsored"
-                title="Flaticon"
-              >
-                www.flaticon.com
-              </Link>
-              {" is licensed by "}
-              <Link
-                href="https://creativecommons.org/licenses/by/3.0/"
-                title="Creative Commons BY 3.0"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                CC 3.0 BY
-              </Link>
-            </Typography>
-          </Grid>
+          </Grid> */}
         </Grid>
       </Container>
     </Typography>
