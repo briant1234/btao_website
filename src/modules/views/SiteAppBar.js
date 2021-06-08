@@ -94,7 +94,7 @@ function SiteAppBar(props) {
               variant="h6"
               underline="none"
               className={clsx(classes.rightLink, classes.linkSecondary)}
-              href="/portraits"
+              href={siteLinks.Portraits}
             >
               {"Portraits"}
             </Link>
@@ -102,7 +102,7 @@ function SiteAppBar(props) {
               variant="h6"
               underline="none"
               className={clsx(classes.rightLink, classes.linkSecondary)}
-              href="/about"
+              href={siteLinks.About}
             >
               {"About"}
             </Link>
@@ -110,7 +110,7 @@ function SiteAppBar(props) {
               variant="h6"
               underline="none"
               className={clsx(classes.rightLink, classes.linkSecondary)}
-              href="/pricing"
+              href={siteLinks.Pricing}
             >
               {"Pricing"}
             </Link>
