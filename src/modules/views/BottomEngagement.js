@@ -47,7 +47,7 @@ function BottomEngagement(props) {
       <Typography variant="subtitle2" align="left">
         How do I make a booking?
       </Typography>
-      <Typography variant="body1" gutterBottom={true} style={{ width: "50vw" }}>
+      <Typography variant="body1" gutterBottom={true}>
         You can use the button above to send me an email! or feel free to reach
         me through Facebook/Instagram. Let me know what kind of shoot you're
         looking for, and we can go from there!
@@ -55,14 +55,14 @@ function BottomEngagement(props) {
       <Typography variant="subtitle2">
         Do I need to put down a deposit to book a shoot?
       </Typography>
-      <Typography variant="body1" gutterBottom={true} style={{ width: "50vw" }}>
+      <Typography variant="body1" gutterBottom={true}>
         Yes, to finalize a booking and secure the date and time of the shoot, I
         require a deposit of 50% for portrait sessions, and 30% for weddings
       </Typography>
       <Typography variant="subtitle2">
         How do you deliver the photos after the shoot?
       </Typography>
-      <Typography variant="body1" gutterBottom={true} style={{ width: "50vw" }}>
+      <Typography variant="body1" gutterBottom={true}>
         I will send you a link to a photo gallery with all the edited photos
         from your shoot, and from there you can use the integrated print shop to
         order any prints or photo products that you want! Photos will be ready
@@ -71,7 +71,7 @@ function BottomEngagement(props) {
       <Typography variant="subtitle2">
         Can I post your photos to my social media?
       </Typography>
-      <Typography variant="body1" gutterBottom={true} style={{ width: "50vw" }}>
+      <Typography variant="body1" gutterBottom={true}>
         Absolutely! All sessions include rights to post, share, and print any
         photos from the shoot! I only ask that you don't further edit or filter
         my photos, as I consider my editing a part of my work and wish that they
