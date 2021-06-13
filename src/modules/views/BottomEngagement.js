@@ -1,8 +1,7 @@
 import * as React from "react";
 import PropTypes from "prop-types";
-import { Button, Container } from "@material-ui/core";
+import { Button, Container, Typography } from "@material-ui/core";
 import { withStyles } from "@material-ui/core/styles";
-import Typography from "../../components/Typography";
 
 const styles = (theme) => ({
   root: {

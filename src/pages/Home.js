@@ -1,5 +1,5 @@
 import * as React from "react";
-import ProductCategories from "../modules/views/ProductCategories";
+import PhotoGallery from "../modules/views/PhotoGallery";
 import BottomEngagement from "../modules/views/BottomEngagement";
 import AppFooter from "../modules/views/AppFooter";
 import ProductHero from "../modules/views/ProductHero";
@@ -8,16 +8,17 @@ import ProductHowItWorks from "../modules/views/ProductHowItWorks";
 import ProductCTA from "../modules/views/ProductCTA";
 import SiteAppBar from "../modules/views/SiteAppBar";
 import withRoot from "../modules/withRoot";
+import { Photo } from "@material-ui/icons";
 
 function Index() {
   return (
     <React.Fragment>
       <SiteAppBar />
       <ProductHero />
-      {/* <ProductValues />
-      <ProductCategories />
-      <ProductHowItWorks />
-      <ProductCTA /> */}
+      {/* <ProductValues /> */}
+      <PhotoGallery />
+      {/* <ProductHowItWorks /> */}
+      {/* <ProductCTA /> */}
       <BottomEngagement />
       <AppFooter />
     </React.Fragment>
