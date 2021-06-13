@@ -1,10 +1,11 @@
-import * as React from "react";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
-import ButtonBase from "@material-ui/core/ButtonBase";
-import { Button, Container, Typography } from "@material-ui/core";
-import { LocalConvenienceStoreOutlined } from "@material-ui/icons";
+import { Container } from "@material-ui/core";
+
+//react-photo-gallery
+import Gallery from "react-photo-gallery";
+import Carousel, { Modal, ModalGateway } from "react-images";
 
 const styles = (theme) => ({
   root: {
@@ -88,9 +89,23 @@ function PhotoGallery(props) {
   const { classes } = props;
   const [galleryImages, setGalleryImages] = useState([]);
 
+  const [currentImage, setCurrentImage] = useState(0);
+  const [viewerIsOpen, setViewerIsOpen] = useState(false);
+
+  const openLightbox = useCallback((event, { photo, index }) => {
+    setCurrentImage(index);
+    setViewerIsOpen(true);
+  }, []);
+
+  const closeLightbox = () => {
+    setCurrentImage(0);
+    setViewerIsOpen(false);
+  };
+
   useEffect(() => {
     // fetch grad album url
     fetch("https://api.imgur.com/3/album/PodnaII/images", {
+      referrer: "",
       method: "GET",
       mode: "cors",
       headers: {
@@ -102,65 +117,37 @@ function PhotoGallery(props) {
       .then((json) => {
         //get the data object
         const jsonData = json.data;
-        const imageIDList = jsonData.map((imageObject) => {
-          return imageObject.id;
+        const imageList = jsonData.map((imageObject) => {
+          return {
+            src: imageObject.link,
+            height: imageObject.height,
+            width: imageObject.width,
+          };
         });
-        return imageIDList;
+        return imageList;
       })
       .then((imageList) => {
         setGalleryImages(imageList);
       });
   }, []);
 
-  const getThumbnailImage = () => {
-    galleryImages.map((imageID) => {
-      //adding a "t" to the end of the image id returns a thumbnail size image
-      return "https://imgur.com/" + imageID + "t.jpg";
-    });
-  };
-
-  const getImage = () => {
-    galleryImages.map((imageID) => {
-      //adding a "t" to the end of the image id returns a thumbnail size image
-      return "https://imgur.com/" + imageID + ".jpg";
-    });
-  };
-
   return (
     <Container className={classes.root} component="section">
-      {/* <Typography variant="h4" marked="center" align="center" component="h2">
-        Check out some of my work here!
-      </Typography>
-      <div className={classes.images}>
-        {images.map((image) => (
-          <ButtonBase
-            key={image.title}
-            className={classes.imageWrapper}
-            style={{
-              width: image.width,
-            }}
-          >
-            <div
-              className={classes.imageSrc}
-              style={{
-                backgroundImage: `url(${image.url})`,
-              }}
+      <Gallery photos={galleryImages} onClick={openLightbox} />
+      <ModalGateway>
+        {viewerIsOpen ? (
+          <Modal onClose={closeLightbox}>
+            <Carousel
+              currentIndex={currentImage}
+              views={galleryImages.map((x) => ({
+                ...x,
+                srcset: x.srcSet,
+                caption: x.title,
+              }))}
             />
-            <div className={classes.imageBackdrop} />
-            <div className={classes.imageButton}>
-              <Typography
-                component="h3"
-                variant="h6"
-                color="inherit"
-                className={classes.imageTitle}
-              >
-                {image.title}
-                <div className={classes.imageMarked} />
-              </Typography>
-            </div>
-          </ButtonBase>
-        ))}
-      </div> */}
+          </Modal>
+        ) : null}
+      </ModalGateway>
     </Container>
   );
 }
