@@ -1,7 +1,7 @@
 import React from "react";
 
 //React Router
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { HashRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 //Import theme
 import { ThemeProvider } from "@material-ui/core/styles";
