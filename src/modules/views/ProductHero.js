@@ -10,7 +10,7 @@ const styles = (theme) => ({
   background: {
     backgroundImage: `url(${gradBackgroundImage})`,
     backgroundColor: "#7fc7d9", // Average color of the background image.
-    backgroundPosition: "50% 50%",
+    backgroundPosition: "center",
   },
   button: {
     minWidth: 200,
@@ -18,9 +18,6 @@ const styles = (theme) => ({
   h5: {
     marginBottom: theme.spacing(4),
     marginTop: theme.spacing(4),
-    [theme.breakpoints.up("sm")]: {
-      marginTop: theme.spacing(10),
-    },
   },
   more: {
     marginTop: theme.spacing(2),
@@ -33,13 +30,13 @@ function ProductHero(props) {
   return (
     <ProductHeroLayout backgroundClassName={classes.background}>
       {/* Increase the network loading priority of the background image. */}
-      {/* <img
-        style={{ display: 'none' }}
-        src={backgroundImage}
+      <img
+        style={{ display: "none" }}
+        src={gradBackgroundImage}
         alt="increase priority"
-      /> */}
+      />
       <Typography color="inherit" align="center" variant="h2" marked="center">
-        {"Portraits & Weddings"}
+        {"Weddings & Portraits"}
       </Typography>
       <Typography
         color="inherit"
@@ -50,6 +47,7 @@ function ProductHero(props) {
         Photographer located around NYC/PA/NJ
       </Typography>
       <Button
+        style={{ marginTop: "100px" }}
         color="secondary"
         variant="contained"
         size="large"
