@@ -4,16 +4,13 @@ import { withStyles } from "@material-ui/core/styles";
 import { Button, Typography } from "@material-ui/core";
 import ProductHeroLayout from "./ProductHeroLayout";
 
-const backgroundImage =
-  "https://images.unsplash.com/photo-1534854638093-bada1813ca19?auto=format&fit=crop&w=1400&q=80";
+const gradBackgroundImage = "https://i.imgur.com/1hEXI6a.jpg";
 
-const gradBackgroundImage =
-  "https://lh3.googleusercontent.com/pw/ACtC-3fWamx5qRl677LD2-a-CEMyodKp35ymfQttvc2Lin7INkfJUUjxm-Y35a2hWp_3Qb-O5H6tyEiOgaefd2Img9QvVTumcOG2JFCalnwKORcPZ06JQ2V1TuTvK2gIg7Bk_5ElW9VTXigMFS9VRVUQfEoyNw=w1078-h719-no?authuser=0";
 const styles = (theme) => ({
   background: {
     backgroundImage: `url(${gradBackgroundImage})`,
     backgroundColor: "#7fc7d9", // Average color of the background image.
-    backgroundPosition: "center",
+    backgroundPosition: "50% 50%",
   },
   button: {
     minWidth: 200,
@@ -50,7 +47,7 @@ function ProductHero(props) {
         variant="h5"
         className={classes.h5}
       >
-        Pittsburgh & North-East based Photographer
+        Photographer located around NYC/PA/NJ
       </Typography>
       <Button
         color="secondary"

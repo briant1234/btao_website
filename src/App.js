@@ -1,7 +1,7 @@
 import React from "react";
 
 //React Router
-import { HashRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { HashRouter, Switch, Route } from "react-router-dom";
 
 //Import theme
 import { ThemeProvider } from "@material-ui/core/styles";
@@ -14,16 +14,10 @@ import { default as Privacy } from "./pages/Privacy";
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Router>
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route exact path="/weddings">
-            <Privacy />
-          </Route>
-        </Switch>
-      </Router>
+      <HashRouter>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/wedding" component={Privacy} />
+      </HashRouter>
     </ThemeProvider>
   );
 }

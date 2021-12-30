@@ -2,8 +2,10 @@ import React from "react";
 import clsx from "clsx";
 
 import { withStyles } from "@material-ui/core/styles";
-import { AppBar, Link, Toolbar } from "@material-ui/core";
+import { AppBar, Link, Toolbar, Typography } from "@material-ui/core";
 import { styles as toolbarStyles } from "../../components/Toolbar";
+
+import { Link as RouterLink } from "react-router-dom";
 
 // Import constants
 import { SiteTitle } from "../../constants/Strings";
@@ -45,7 +47,7 @@ const styles = (theme) => ({
 
 const siteLinks = {
   SiteTitle: "/",
-  Weddings: "/",
+  Weddings: "/wedding",
   Portraits: "/",
   About: "/",
   Pricing: "/",
@@ -81,15 +83,17 @@ function SiteAppBar(props) {
             {SiteTitle}
           </Link>
           <div className={classes.right}>
-            <Link
+            {/* <RouterLink to="/wedding">
+            <Typography
               color="inherit"
               variant="h6"
               underline="none"
               className={classes.rightLink}
-              href="/weddings"
+              href="/wedding"
             >
               {"Weddings"}
-            </Link>
+            </Typography>
+            </RouterLink>
             <Link
               variant="h6"
               underline="none"
@@ -113,7 +117,7 @@ function SiteAppBar(props) {
               href={siteLinks.Pricing}
             >
               {"Pricing"}
-            </Link>
+            </Link> */}
           </div>
         </Toolbar>
       </AppBar>
