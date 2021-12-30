@@ -7,7 +7,7 @@ const styles = (theme) => ({
   root: {
     display: "flex",
     flexDirection: "column",
-    alignItems: "center",
+    alignItems: "start",
     marginTop: theme.spacing(9),
     marginBottom: theme.spacing(9),
   },
@@ -51,12 +51,42 @@ function BottomEngagement(props) {
         me through Facebook/Instagram. Let me know what kind of shoot you're
         looking for, and we can go from there!
       </Typography>
+      <Typography variant="subtitle2" align="left">
+        Are you taking wedding/engagement bookings for the 2022 season?
+      </Typography>
+      <Typography variant="body1" gutterBottom={true}>
+        Yes! I'm currently booking sessions for the 2022 season, send me an
+        email with the button above to start a booking.
+      </Typography>
+      <Typography variant="subtitle2" align="left">
+        What is your pricing like?
+      </Typography>
+      <Typography variant="body1" gutterBottom={true}>
+        Portrait photoshoots start at $200/hr, and weddings start at $3000. The
+        rate for wedding is currently discounted since I'm just starting out
+        switching from regular events to weddings. Book now to take advantage!
+      </Typography>
       <Typography variant="subtitle2">
         Do I need to put down a deposit to book a shoot?
       </Typography>
       <Typography variant="body1" gutterBottom={true}>
         Yes, to finalize a booking and secure the date and time of the shoot, I
-        require a deposit of 50% for portrait sessions, and 30% for weddings
+        require a deposit of 50% for portrait sessions, and 30% for weddings.
+        The deposit is refundable up until 2 weeks before the day of the
+        shoot/event. The rest of the payment is due 24hrs before the date of the
+        shoot/event.
+      </Typography>
+      <Typography variant="subtitle2">
+        Where are you located, and are you willing to travel?
+      </Typography>
+      <Typography variant="body1" gutterBottom={true}>
+        I'm based in the NYC/Philly area, splitting time between the two cities,
+        and consider anything within a 50 mile radius to be local. I also often
+        visit San Francisco/Bay Area, and Pittsburgh, and if you're looking to
+        book a shoot/wedding in those areas please message me! For destination
+        weddings, I am also willing to travel, for an additional destination
+        fee. This varies based on your specific wedding, so shoot me a message
+        to talk about it!
       </Typography>
       <Typography variant="subtitle2">
         How do you deliver the photos after the shoot?
