@@ -2,6 +2,10 @@ import * as React from "react";
 import PropTypes from "prop-types";
 import { Button, Container, Typography } from "@material-ui/core";
 import { withStyles } from "@material-ui/core/styles";
+import styled from "styled-components";
+
+const mailToString =
+  "mailto:btaophotography@gmail.com?subject=Booking a photoshoot&body=Let me know what sort of photos you're looking for, how many people you're taking photos with, and what you find important in photographs!";
 
 const styles = (theme) => ({
   root: {
@@ -16,6 +20,8 @@ const styles = (theme) => ({
     borderRadius: 0,
     height: "auto",
     padding: theme.spacing(2, 5),
+    alignSelf: "center",
+    marginBottom: "10px",
   },
   link: {
     marginTop: theme.spacing(3),
@@ -31,17 +37,11 @@ function BottomEngagement(props) {
 
   return (
     <Container className={classes.root} component="section">
-      <Button
-        href="mailto:btaophotography@gmail.com?subject=Booking a photoshoot&body=Let me know what sort of photos you're looking for, how many people you're taking photos with, and what you find important in photographs!"
-        className={classes.button}
-      >
+      <Button className={classes.button} href={mailToString}>
         <Typography variant="h4" component="span">
-          Got any questions? Need help?
+          Got any questions? Click Here!
         </Typography>
       </Button>
-      <Typography variant="subtitle1" className={classes.link}>
-        Click above to shoot me an email, and we can talk about it!
-      </Typography>
       <Typography variant="h6">Frequently Asked Questions</Typography>
       <Typography variant="subtitle2" align="left">
         How do I make a booking?
@@ -62,9 +62,11 @@ function BottomEngagement(props) {
         What is your pricing like?
       </Typography>
       <Typography variant="body1" gutterBottom={true}>
-        Portrait photoshoots start at $200/hr, and weddings start at $3000. The
-        rate for wedding is currently discounted since I'm just starting out
-        switching from regular events to weddings. Book now to take advantage!
+        Portrait photoshoots start at $200/hr, and weddings start at $3000.
+        Exact pricing for you and your needs will be personalized to you, so
+        send me message so we can discuss. The rate for wedding is currently
+        discounted as I build out my wedding portfolio. Book now to take
+        advantage!
       </Typography>
       <Typography variant="subtitle2">
         Do I need to put down a deposit to book a shoot?
