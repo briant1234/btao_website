@@ -62,11 +62,11 @@ function BottomEngagement(props) {
         What is your pricing like?
       </Typography>
       <Typography variant="body1" gutterBottom={true}>
-        Portrait photoshoots start at $200/hr, and weddings start at $3000.
-        Exact pricing for you and your needs will be personalized to you, so
-        send me message so we can discuss. The rate for wedding is currently
-        discounted as I build out my wedding portfolio. Book now to take
-        advantage!
+        Portrait photoshoots start at $200/hr, Engagement sessions start at
+        $800, and weddings start at $3500. Exact pricing for you and your needs
+        will be personalized to you, so send me message so we can discuss. The
+        rate for wedding is currently discounted as I build out my wedding
+        portfolio. Book now to take advantage!
       </Typography>
       <Typography variant="subtitle2">
         Do I need to put down a deposit to book a shoot?
