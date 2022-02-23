@@ -44,7 +44,7 @@ function ProductHero(props) {
         variant="h5"
         className={classes.h5}
       >
-        Photographer located around NYC/PA/NJ
+        Photographer based in Philly & NYC
       </Typography>
       <Button
         style={{ marginTop: "100px" }}
